@@ -1,8 +1,7 @@
 package com.example.demo.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,6 +16,10 @@ import lombok.experimental.FieldDefaults;
 @Table(name = "admin")
 public class Admin {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+     Integer adminId;
 
-
+     String username;
+     String password;
 }
